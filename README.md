@@ -89,3 +89,7 @@ This notebook is a research/experimentation harness rather than a packaged libra
 - [Suno Bark](https://github.com/suno-ai/bark) — generative text-to-audio model.
 - [bark-voice-cloning HuBERT quantizer](https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer) by gitmylo — semantic tokenization for Bark voice cloning.
 - [NISQA](https://github.com/gabrielmittag/NISQA) by Gabriel Mittag — no-reference speech quality assessment.
+
+## License
+
+Released under the [MIT License](LICENSE).
