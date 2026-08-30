@@ -1,20 +1,8 @@
 # ---------------------------------------------------------------------------
-# Language statistics
-# ---------------------------------------------------------------------------
-# GitHub's Linguist weighs languages by byte count. The preserved Colab
-# notebook is ~2.6 MB (almost entirely embedded audio output) against ~44 KB of
-# Python, so without this the repository reports as "Jupyter Notebook" despite
-# the source being a Python package. Marking it as documentation excludes it
-# from the statistics while keeping it browsable and rendered on GitHub.
-notebooks/**   linguist-documentation
-*.ipynb        linguist-documentation
-
-# ---------------------------------------------------------------------------
 # Line endings
 # ---------------------------------------------------------------------------
 # Force LF for source regardless of a contributor's core.autocrlf setting, so
-# the repository never accumulates mixed endings. These files are already LF,
-# so this pins current behaviour rather than rewriting anything.
+# the repository never accumulates mixed endings.
 *.py     text eol=lf
 *.toml   text eol=lf
 *.cfg    text eol=lf
@@ -26,10 +14,6 @@ notebooks/**   linguist-documentation
 *.sh     text eol=lf
 .gitattributes text eol=lf
 .gitignore     text eol=lf
-
-# Notebooks are JSON and git may normalise them, but the checked-in copy
-# predates this file; left at the default to avoid a 2.6 MB whitespace diff.
-*.ipynb  text
 
 # ---------------------------------------------------------------------------
 # Binary artefacts

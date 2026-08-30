@@ -30,13 +30,11 @@ Voice-Cloning/
 │   ├── quality.py        # NISQA subprocess wrapper
 │   └── cli.py            # clone / speak / narrate / score
 ├── tests/                # 63 tests over the model-independent logic
-├── notebooks/
-│   └── Voice_generation.ipynb   # Original Colab exploration notebook
 ├── pyproject.toml
 └── requirements.txt
 ```
 
-The package is split so that everything not requiring Bark — sentence splitting, waveform assembly, the `.npz` format, configuration — is importable and testable without model weights or a GPU. `import voice_cloning` pulls in no heavy dependencies; Bark and torch are imported lazily inside the functions that need them.
+The original Colab notebook is no longer tracked; it remains in the git history. The package is split so that everything not requiring Bark — sentence splitting, waveform assembly, the `.npz` format, configuration — is importable and testable without model weights or a GPU. `import voice_cloning` pulls in no heavy dependencies; Bark and torch are imported lazily inside the functions that need them.
 
 ## Installation
 
