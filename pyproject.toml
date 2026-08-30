@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-cloning"
+version = "0.1.0"
+description = "Zero-shot voice cloning and long-form text-to-speech built on Suno Bark and a HuBERT semantic quantizer."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Hamid Jahani", email = "hamidjahani999@gmail.com" }]
+keywords = ["voice-cloning", "text-to-speech", "bark", "hubert", "tts", "speech-synthesis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Runtime deps that are importable from PyPI. Bark and the HuBERT quantizer are
+# git installs and are listed in requirements.txt instead - see docs there.
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "nltk>=3.8",
+    "torch>=1.13",
+    "torchaudio>=0.13",
+]
+
+[project.optional-dependencies]
+flac = ["soundfile>=0.12"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.urls]
+Homepage = "https://github.com/sheperd007/Voice-Cloning"
+Repository = "https://github.com/sheperd007/Voice-Cloning"
+
+[project.scripts]
+voice-cloning = "voice_cloning.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

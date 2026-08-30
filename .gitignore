@@ -1,0 +1,42 @@
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# --- testing / tooling --------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# --- model weights and checkpoints -------------------------------------------
+# HuBERT and the tokenizer are fetched by HuBERTManager on first run; they are
+# hundreds of MB and must never be committed.
+data/models/
+*.pt
+*.pth
+*.tar
+
+# --- generated artefacts ------------------------------------------------------
+# Voice prompts and rendered audio are outputs, not source.
+*.npz
+*.wav
+*.flac
+results/
+NISQA/
+
+# --- notebooks ----------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- editors / OS -------------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
