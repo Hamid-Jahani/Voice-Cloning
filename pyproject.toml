@@ -33,8 +33,8 @@ flac = ["soundfile>=0.12"]
 dev = ["pytest>=7.0", "pytest-cov>=4.0"]
 
 [project.urls]
-Homepage = "https://github.com/sheperd007/Voice-Cloning"
-Repository = "https://github.com/sheperd007/Voice-Cloning"
+Homepage = "https://github.com/Hamid-Jahani/Voice-Cloning"
+Repository = "https://github.com/Hamid-Jahani/Voice-Cloning"
 
 [project.scripts]
 voice-cloning = "voice_cloning.cli:main"

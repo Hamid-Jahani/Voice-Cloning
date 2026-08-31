@@ -39,7 +39,7 @@ The original Colab notebook is no longer tracked; it remains in the git history.
 ## Installation
 
 ```bash
-git clone https://github.com/sheperd007/Voice-Cloning.git
+git clone https://github.com/Hamid-Jahani/Voice-Cloning.git
 cd Voice-Cloning
 pip install -r requirements.txt
 pip install -e .
